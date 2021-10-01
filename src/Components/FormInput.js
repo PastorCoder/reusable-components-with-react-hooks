@@ -1,17 +1,30 @@
 // ./components/FormInput.js
-import React, {useState} from "react";
+import React, { useState } from "react";
+
+
+
+
 
 function FormInput(props) {
-  const [inputType] = useState(props.type)
-  const [inputValue, setInputValue] = useState('')
+  const [inputType] = useState(props.type);
+  const [inputValue, setInputValue] = useState("");
 
-  function handleChange(event){
+
+  
+  function handleChange(event) {
     setInputValue(event.target.value);
-    if(props.onChange) props.onChange(inputValue)
+    if (props.onChange) props.onChange(inputValue);
   }
+
   return (
     <>
-      <input type={inputType} value={inputValue} name="input-form" onChange={handleChange} class="inputclass"/>
+      <input
+        type={inputType}
+        value={inputValue}
+        name="input-form"
+        onChange={handleChange}
+        class="inputclass"
+      />
     </>
   );
 }

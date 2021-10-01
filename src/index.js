@@ -43,13 +43,13 @@ function App() {
     <div className="App">
       <form>
         <Modal show={true} message={"Hello"}>
-          <p>THIS IS A MODAL</p>
+          <p>THIS IS A MODAL</p><br /><br />
         </Modal>
-        <FormInput type={"text"} onChange={handleChange} />
-        <FormInput type={"email"} onChange={handleChange} />
+        <FormInput type={"text"} onChange={handleChange} />	&nbsp;	&nbsp;	&nbsp;	&nbsp;
+        <FormInput type={"email"} onChange={handleChange} /><br /><br />
         <div>
-          <CustomSelect data={data} onSelectChange={onSelectChange} />
-        </div>
+          <CustomSelect data={data} onSelectChange={onSelectChange} className="align-switch" />
+        </div><br />
         <div>
           <ToggleSwitch
             id="id"
@@ -57,11 +57,11 @@ function App() {
             disabled={false}
             Text={["Yes", "No"]}
             onToggleChange={onToggleChange}
-          />
+          /><br /><br />
         </div>
-        <Button variant="danger" size={"sm"} >Small Button</Button>
-        <Button variant="primary" size={"lg"} >Smaller Button</Button>
-        <Button variant="warning" size={"xs"} >Big Button</Button>
+        <Button variant="danger" size={"sm"} >Small Button</Button>&nbsp;	&nbsp;	&nbsp;	&nbsp;
+        <Button variant="primary" size={"lg"} >Smaller Button</Button>&nbsp;	&nbsp;	&nbsp;	&nbsp;
+        <Button variant="warning" size={"xs"} >Big Button</Button><br /><br />
       </form>
     </div>
   );
